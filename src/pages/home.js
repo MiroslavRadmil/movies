@@ -1,6 +1,3 @@
-import {Link, Outlet} from 'react-router-dom'
-import Navbar from "../components/navbar"
-import Foot from "../components/foot"
 import "./home.css"
 
 const home = () => {
