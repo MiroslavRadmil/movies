@@ -1,0 +1,50 @@
+header {
+    height: 150px;
+    /* border: 5px solid red; */
+    /* background-color: rgba(93, 89, 84, .5); */
+    background: url(../../../../../JS/test/img/pozadi.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    /* flex-direction: row; */
+    align-items:last baseline;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+       margin: 0 0 30px 40px;
+       background: none;
+}
+
+
+.link {
+    margin-right: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgba(94, 110, 96, 0.8);
+    color: #000;
+    outline: none;
+
+    -webkit-box-shadow: 13px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 13px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 8px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.link:hover {
+    scale: 1.2;
+}
+ 
+.link:active {
+    color: #000;
+}
+
+
+.activeLink {
+    color: rgb(20, 19, 19);
+    background-color: #89D99D;
+}

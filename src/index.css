@@ -1,4 +1,11 @@
-.show {
-    display: none;
-    font-size: 50px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1E5959;
+}
+
+.pata {
+    background-color: #89D99D;
+    
 }
