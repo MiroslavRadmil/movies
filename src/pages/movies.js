@@ -59,6 +59,8 @@ const Movies = () => {
     }
 
   return (<div className="all-movies">
+
+    <h2>Přidej svůj oblíbený film</h2>
     
     <form className="add-form" onSubmit={submitForm}>
       <input type="text" 
@@ -77,7 +79,7 @@ const Movies = () => {
              onChange={(e) => setYearRelase(e.target.value)} 
              required
              value={yearRelase}/>
-      <input type="submit" value="Přidaj" />
+      <input type="submit" value="Přidej" />
     </form>
 
 
