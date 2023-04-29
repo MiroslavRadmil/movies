@@ -1,14 +1,22 @@
+
+.home {
+    background-image: url(../img/movie.svg);
+    background-size:center;
+    background-repeat: repeat;
+    height: 90vh;
+    opacity: .8;
+  
+   
+}
+  
 .style-header {
     background: rgba(0,0,0,0);
     position: relative;
     width: 200px;
-    /* display: block; */
+   opacity: 1;
    margin: 0 auto;
     border-top-right-radius:0.5rem;
     border-bottom-left-radius: 0.5rem;
-    height: 100px;
-    /* overflow:hidden; */
-    cursor: pointer; 
     font-size: 50px;
     text-align: center;
          
@@ -34,3 +42,8 @@ h1::after {
 h1:hover::after {
     transform: scale(1,1);
 }
+
+footer {
+    flex: none;
+  }
+  
