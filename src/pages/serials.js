@@ -17,7 +17,7 @@ const reducer = (state, action) => {
         ...state,
         movies: newMovies,
         showNotification: true,
-        notificationContent: "Film byl přidán"
+        notificationContent: "Seriál byl přidán"
       }
   }
 
@@ -25,7 +25,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       showNotification: true,
-      notificationContent: "zadej film"
+      notificationContent: "Zadej seriál"
     }
   }
 
@@ -66,6 +66,7 @@ const defaultState = {
 const Serials = () => {
   
   const [movieName, setMovieName] = useState("")
+  const [serialScore, setScore] = useState("")
   const [state, dispatch] = useReducer(reducer, defaultState)
 
 
@@ -78,7 +79,7 @@ const Serials = () => {
 
 
     if (movieName) {
-      const newMovie = {id: new Date().getTime(), name: movieName}
+      const newMovie = {id: new Date().getTime(), name: movieName, score: serialScore}
       dispatch({type: "ADD_MOVIE", payload: newMovie})
     } else {
       dispatch ( {type: "EMPTY_MOVIE"})
@@ -100,13 +101,23 @@ const Serials = () => {
   return <section>
     {state.showNotification && <Modal notContenet={state.notificationContent} closeNotif={closeNotification}/>}
     <form onSubmit={submitForm}>
-      <input type="text" onChange={ (e) => setMovieName(e.target.value) } value={movieName}/>
+      <input type="text" 
+             onChange={ (e) => setMovieName(e.target.value) } 
+             value={movieName}
+             placeholder="Seriál"/>
+      <input type="number"
+             onChange={ (e) => setScore(e.target.value)} 
+             value={serialScore} 
+             min="1" 
+             max="10" 
+             placeholder="Oblíbenost od 1 do 10"/>
       <input type="submit" value="Přidat" />
     </form>
     <div>
       {state.movies.map( (oneMovie) => {
         return <div key={oneMovie.id}>
           <p>{oneMovie.name}</p>
+          <p>{oneMovie.score}</p>
           <button onClick={() => dispatch ({type: "REMOVE", payload: oneMovie.id })}>
             Smaž
           </button>
