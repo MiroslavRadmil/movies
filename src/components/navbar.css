@@ -1,11 +1,12 @@
 header {
     height: 150px;
-    background: url(../../../../../JS/test/img/pozadi.png) no-repeat;
-    background-size: 100% 100%;
+    background: url(../img/4390285.svg) repeat-x;
+    /* background-size: 100% 100%; */
     display: flex;
-    align-items:last baseline;
+    align-items: last baseline;
     margin: 0;
     padding: 0;
+    
 
 }
 
@@ -23,7 +24,7 @@ nav {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    background-color: rgba(94, 110, 96, 0.8);
+    background-color: rgba(111, 133, 113, 0.8);
     color: #000;
     outline: none;
 
@@ -45,3 +46,89 @@ box-shadow: 8px 5px 5px 0px rgba(0,0,0,0.75);
     color: rgb(20, 19, 19);
     background-color: #89D99D;
 }
+.hamburger-icon {
+    display: none;
+}
+
+
+.mobile-nav-show {
+    display: none;
+  
+}
+
+.mobile {
+    display: none;
+}
+
+
+
+
+/*********************************************************************
+**********************************************************************
+                                MOBIL
+*********************************************************************
+*********************************************************************/
+
+
+@media only screen and (max-width: 600px) {
+    
+ .mobile {
+    display: block;
+ }
+      .link {
+        display: none;
+        
+    }
+
+    .hamburger-icon {
+        display: block;
+        background-color: rgba(7, 220, 7, 0.3);
+        font-size: 3rem;
+        padding: 0.2rem;
+        margin-bottom: 2rem;
+        
+        cursor: pointer;
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mobile-nav-show{
+        display: block;
+        position: absolute;
+        top: 150px;
+        left: -15px;
+        z-index: 2;
+        opacity: 0.8;
+        
+        
+           
+    }
+
+    .mobile-nav-hide {
+        display: none;
+    }
+}
+
+  
+    
+    .mobile-nav-show li {
+        list-style-type: none;
+        
+    }
+  
+    .mobile-nav-show a {
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        width: 15rem;
+        padding: .5rem;
+        font-size: 1.5rem;
+        cursor: auto;
+        border: 0.5px solid rgb(6, 161, 6);
+        
+    }
+
+    

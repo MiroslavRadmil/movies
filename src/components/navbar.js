@@ -1,11 +1,21 @@
 import { NavLink} from "react-router-dom"
 import "./navbar.css"
 
+import Mobilbar from "./mobilbar"
+
+
+
+
+
 const Navbar = () => {
+
+  
+  
+  
   return ( 
   <header>
-    <nav>
-
+    <nav className="navigation">
+        
         <NavLink to="/" className={ ({isActive}) =>
         isActive ? "activeLink link" : "nonactiveLink link"
       }
@@ -18,7 +28,9 @@ const Navbar = () => {
         isActive ? "activeLink link" : "nonactiveLink link"
       }
 >Seriály</NavLink>
+<Mobilbar/>
     </nav>
+    
   </header>
   )
 }
