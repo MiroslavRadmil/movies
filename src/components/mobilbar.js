@@ -4,7 +4,7 @@ import {FaHamburger} from "react-icons/fa"
 
 
 const Mobilbar = () => {
-  const [showMenu, setShowMenu] = useState(true)
+  const [showMenu, setShowMenu] = useState(false)
   return (
     <div className="mobile"><FaHamburger onClick={() => setShowMenu(!showMenu)}
     className="hamburger-icon"/>
